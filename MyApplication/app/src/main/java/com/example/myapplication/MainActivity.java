@@ -25,4 +25,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this,LoginActivity.class);
         startActivity(intent);
     }
+
+    public void cadastrarCliente(View view) {
+        Intent intent = new Intent(this,LoginClienteActivity.class);
+        startActivity(intent);
+    }
 }
