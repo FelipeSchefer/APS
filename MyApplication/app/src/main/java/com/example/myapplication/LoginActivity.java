@@ -17,39 +17,39 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
     }
 
-    public void listarUser(View view){
+    public void listarCarro(View view){
 
-        Intent intent = new Intent(this,ListagemUserActivity.class);
+        Intent intent = new Intent(this, ListagemCarroActivity.class);
 
         startActivity(intent);
     }
 
-    public void logar(View view) {
-        EditText login = findViewById(R.id.editTextLogin);
-        EditText senha = findViewById(R.id.editTextSenha);
+    public void buscar(View view) {
+        EditText modelo = findViewById(R.id.editTextModelo);
+        EditText ano = findViewById(R.id.editTextAno);
 
 
-        if(login.getText().toString().equals("")){
-            Toast.makeText(this,"Seu login está incorreto",Toast.LENGTH_LONG).show();
+        if(modelo.getText().toString().equals("")){
+            Toast.makeText(this,"Seu modelo está incorreto",Toast.LENGTH_LONG).show();
             return;
         }
-        if (senha.getText().toString().equals("")) {
-            Toast.makeText(this,"Sua senha está incorreta",Toast.LENGTH_LONG).show();
+        if (ano.getText().toString().equals("")) {
+            Toast.makeText(this,"Sua ano está incorreta",Toast.LENGTH_LONG).show();
             return;
         }
 
-        Intent intent = new Intent(this, ListagemUserLoginActivity.class);
+        Intent intent = new Intent(this, ListagemCarroLoginActivity.class);
 
-        intent.putExtra("email" , login.getText().toString());
-        intent.putExtra("senha", senha.getText().toString());
+        intent.putExtra("modelo" , modelo.getText().toString());
+        intent.putExtra("ano", ano.getText().toString());
 
         startActivity(intent);
 
-        login.setText("");
-        senha.setText("");
+        modelo.setText("");
+        ano.setText("");
     }
-    public void abrirCadastroUsuario(View view) {
-        Intent intent = new Intent(this, CadastraUsuarioActivity.class);
+    public void abrirCadastroCarro(View view) {
+        Intent intent = new Intent(this, CadastraCarroActivity.class);
         startActivity(intent);
     }
 

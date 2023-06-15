@@ -22,11 +22,11 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="68dp"
-            android:text="Email"
+            android:text="Modelo"
             android:textSize="34sp" />
 
         <EditText
-            android:id="@+id/editTextLogin"
+            android:id="@+id/editTextModelo"
             android:layout_width="match_parent"
             android:layout_height="72dp"
             android:ems="10"
@@ -36,11 +36,11 @@
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="67dp"
-            android:text="Senha"
+            android:text="Ano"
             android:textSize="34sp" />
 
         <EditText
-            android:id="@+id/editTextSenha"
+            android:id="@+id/editTextAno"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:ems="10"
@@ -50,28 +50,28 @@
             android:id="@+id/button3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="logar"
-            android:text="Logar" />
+            android:onClick="buscar"
+            android:text="Buscar" />
 
         <TextView
             android:id="@+id/textView6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Quer se cadastrar?"
+            android:text="Quer cadastrar um carro?"
             android:textSize="20sp" />
 
         <Button
             android:id="@+id/button7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="abrirCadastroUsuario"
+            android:onClick="abrirCadastroCarro"
             android:text="Cadastrar" />
 
         <Button
             android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="listarUser"
-            android:text="Listar Users" />
+            android:onClick="listarCarro"
+            android:text="Listar Carro" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

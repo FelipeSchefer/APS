@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void abrirLogin(View view) {
+    public void abrirEstoque(View view) {
         Intent intent = new Intent(this,LoginActivity.class);
         startActivity(intent);
     }

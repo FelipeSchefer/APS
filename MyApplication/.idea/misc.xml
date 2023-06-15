@@ -3,6 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/fatec.senai/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_cadastra_carro.xml" value="0.22" />
+        <entry key="..\:/Users/fatec.senai/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_dash_board.xml" value="0.2692307692307692" />
+        <entry key="..\:/Users/fatec.senai/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_listagem_carro.xml" value="0.1" />
+        <entry key="..\:/Users/fatec.senai/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_login.xml" value="0.2692307692307692" />
+        <entry key="..\:/Users/fatec.senai/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/fatec.senai/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_repository_carro.xml" value="0.20625" />
+        <entry key="..\:/Users/fatec.senai/AndroidStudioProjects/MyApplication/app/src/main/res/layout/layout_carro_info.xml" value="0.25" />
         <entry key="..\:/Users/fatec.senai/Desktop/Android-E1/MyApplication/app/src/main/res/layout/activity_login.xml" value="0.16875" />
         <entry key="..\:/Users/fatec.senai/Desktop/Android-E1/MyApplication/app/src/main/res/layout/activity_main.xml" value="0.16875" />
       </map>
