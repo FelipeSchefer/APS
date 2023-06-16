@@ -15,16 +15,13 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void listarCarro(View view){
-
         Intent intent = new Intent(this, ListagemCarroActivity.class);
-
         startActivity(intent);
     }
 
     public void buscar(View view) {
         EditText modelo = findViewById(R.id.editTextModelo);
         EditText ano = findViewById(R.id.editTextAno);
-
 
         if(modelo.getText().toString().equals("")){
             Toast.makeText(this,"Seu modelo está incorreto",Toast.LENGTH_LONG).show();
@@ -49,6 +46,4 @@ public class LoginActivity extends AppCompatActivity {
         Intent intent = new Intent(this, CadastraCarroActivity.class);
         startActivity(intent);
     }
-
-
 }

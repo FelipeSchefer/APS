@@ -19,7 +19,7 @@ public class CadastraClienteActivity extends AppCompatActivity {
         repositoryCliente = new RepositoryCliente(this);
     }
 
-    public void cadastrarCarro(View view) {
+    public void cadastrarCliente(View view) {
         EditText nome = findViewById(R.id.nomeClienteId);
         EditText CPF = findViewById(R.id.cpfClienteId);
 
@@ -32,7 +32,7 @@ public class CadastraClienteActivity extends AppCompatActivity {
             cliente.setNome(nome.getText().toString());
             cliente.setCPF(CPF.getText().toString());
 
-            Toast.makeText(this, cliente.getNome() + " cadastrado com sucesso", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Cliente " + cliente.getNome() + " cadastrado com sucesso", Toast.LENGTH_LONG).show();
 
             repositoryCliente.adicionarCliente(cliente);
 

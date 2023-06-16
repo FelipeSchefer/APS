@@ -8,9 +8,7 @@ import android.widget.ListView;
 import java.util.List;
 
 public class ListagemClienteActivity extends AppCompatActivity {
-
     RepositoryCliente repositoryCliente;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
