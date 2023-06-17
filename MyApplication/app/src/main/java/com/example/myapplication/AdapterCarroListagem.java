@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -34,12 +35,16 @@ public class AdapterCarroListagem extends ArrayAdapter<Carro> {
             view = layoutInflater.inflate(R.layout.layout_carro_info,null);
         }
         Carro carro = lista.get(position);
+        TextView id = view.findViewById(R.id.textViewIndex);
         TextView marca = view.findViewById(R.id.textViewMarca);
         TextView ano = view.findViewById(R.id.textViewAno);
         TextView modelo = view.findViewById(R.id.textViewModelo);
+        Button editar = view.findViewById(R.id.btnLayoutCarroId);
+        id.setText(""+carro.getId());
         marca.setText(carro.getMarca());
         ano.setText(carro.getAno());
         modelo.setText(carro.getModelo());
+        editar.hasOnClickListeners();
 
         return view;
     }

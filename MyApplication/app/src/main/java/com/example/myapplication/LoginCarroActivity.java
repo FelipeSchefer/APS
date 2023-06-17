@@ -27,12 +27,12 @@ public class LoginCarroActivity extends AppCompatActivity {
             Toast.makeText(this,"Seu modelo está incorreto",Toast.LENGTH_LONG).show();
             return;
         }
-        if (ano.getText().toString().equals("")) {
+        if(ano.getText().toString().equals("")){
             Toast.makeText(this,"Sua ano está incorreta",Toast.LENGTH_LONG).show();
             return;
         }
 
-        Intent intent = new Intent(this, ListagemCarroLoginActivity.class);
+        Intent intent = new Intent(this, BuscaCarroActivity.class);
         intent.putExtra("modelo" , modelo.getText().toString());
         intent.putExtra("ano", ano.getText().toString());
         startActivity(intent);

@@ -48,6 +48,7 @@ public class RepositoryConcessionaria extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {}
 
+    //--------------------- REPOSITORY CARRO
     public void adicionarCarro(Carro carro){
         ContentValues contentValues = new ContentValues();
         contentValues.put("marca", carro.getMarca());
@@ -119,6 +120,25 @@ public class RepositoryConcessionaria extends SQLiteOpenHelper {
         cursor.close();
         return listaCarro;
     }
+
+    public boolean editarCarroPeloId(String id, String marca, String ano, String modelo){
+        SQLiteDatabase db = getReadableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put("marca", marca);
+        values.put("ano", ano);
+        values.put("modelo", modelo);
+
+        String whereClause = "id = ?";
+        String[] whereArgs = { String.valueOf(id) };
+
+        db.update("carro", values, whereClause, whereArgs);
+
+        db.close();
+
+        return true;
+    }
+
     // ----------------------------------- REPOSITORIO CLIENTE
 
     public void adicionarCliente(Cliente cliente){

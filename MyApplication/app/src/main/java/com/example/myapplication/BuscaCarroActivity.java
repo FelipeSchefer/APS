@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 import java.util.List;
 
-public class ListagemCarroLoginActivity extends AppCompatActivity {
+public class BuscaCarroActivity extends AppCompatActivity {
 
     RepositoryConcessionaria repositoryConcessionaria;
 

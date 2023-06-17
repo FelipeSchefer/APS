@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.List;
 
-public class ListagemClienteLoginActivity extends AppCompatActivity {
+public class BuscaClienteActivity extends AppCompatActivity {
 
     RepositoryConcessionaria repositoryConcessionaria;
 

@@ -5,12 +5,36 @@
     android:orientation="vertical">
 
     <TextView
+        android:id="@+id/textViewIndex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20px"
+        android:padding="20px"
+        android:text="Id" />
+
+    <TextView
+        android:id="@+id/textViewMarca1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20px"
+        android:padding="20px"
+        android:text="Marca" />
+
+    <TextView
         android:id="@+id/textViewMarca"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20px"
         android:padding="20px"
         android:text="Marca" />
+
+    <TextView
+        android:id="@+id/textViewAno1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20px"
+        android:padding="20px"
+        android:text="Ano" />
 
     <TextView
         android:id="@+id/textViewAno"
@@ -21,10 +45,27 @@
         android:text="Ano" />
 
     <TextView
+        android:id="@+id/textViewModelo1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20px"
+        android:padding="20px"
+        android:text="Modelo" />
+
+    <TextView
         android:id="@+id/textViewModelo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20px"
         android:padding="20px"
         android:text="Modelo" />
+
+    <Button
+        android:id="@+id/btnLayoutCarroId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="editarRegistroCarro"
+        android:text="Editar" />
+
+
 </LinearLayout>
