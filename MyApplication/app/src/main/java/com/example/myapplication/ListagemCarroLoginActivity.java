@@ -11,7 +11,7 @@ import java.util.List;
 
 public class ListagemCarroLoginActivity extends AppCompatActivity {
 
-    RepositoryCarro repositoryCarro;
+    RepositoryConcessionaria repositoryConcessionaria;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,20 +22,17 @@ public class ListagemCarroLoginActivity extends AppCompatActivity {
         String modelo = intent.getStringExtra("modelo");
         String ano = intent.getStringExtra("ano");
 
+        repositoryConcessionaria = new RepositoryConcessionaria(this);
 
-        repositoryCarro = new RepositoryCarro(this);
-
-        List<Carro> listaCarro =  repositoryCarro.buscarCarroPeloModAno(modelo, ano);
+        List<Carro> listaCarro =  repositoryConcessionaria.buscarCarroPeloModAno(modelo, ano);
         if(listaCarro.isEmpty()){
             Toast.makeText(this,"Veículo não encontrado",Toast.LENGTH_LONG).show();
         }else{
-            ListView listView = findViewById(R.id.listViewUser);
+            ListView listView = findViewById(R.id.listViewCarro);
             AdapterCarroListagem adapterCarroListagem =
                     new AdapterCarroListagem(this, listaCarro);
 
             listView.setAdapter(adapterCarroListagem);
         }
-
-
     }
 }

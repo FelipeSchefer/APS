@@ -25,7 +25,7 @@
             android:name=".ListagemCarroLoginActivity"
             android:exported="false" />
         <activity
-            android:name=".RepositoryCarro"
+            android:name=".RepositoryConcessionaria"
             android:exported="false" />
         <activity
             android:name=".ListagemCarroActivity"
@@ -34,7 +34,7 @@
             android:name=".CadastraCarroActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".LoginCarroActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

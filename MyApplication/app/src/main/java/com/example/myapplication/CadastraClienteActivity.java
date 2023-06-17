@@ -9,14 +9,14 @@ import android.widget.Toast;
 
 public class CadastraClienteActivity extends AppCompatActivity {
 
-    RepositoryCliente repositoryCliente;
+    RepositoryConcessionaria repositoryConcessionaria;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastra_cliente);
 
-        repositoryCliente = new RepositoryCliente(this);
+        repositoryConcessionaria = new RepositoryConcessionaria(this);
     }
 
     public void cadastrarCliente(View view) {
@@ -34,7 +34,7 @@ public class CadastraClienteActivity extends AppCompatActivity {
 
             Toast.makeText(this, "Cliente " + cliente.getNome() + " cadastrado com sucesso", Toast.LENGTH_LONG).show();
 
-            repositoryCliente.adicionarCliente(cliente);
+            repositoryConcessionaria.adicionarCliente(cliente);
 
             finish();
         }

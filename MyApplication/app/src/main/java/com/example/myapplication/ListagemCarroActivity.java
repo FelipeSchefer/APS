@@ -8,18 +8,18 @@ import java.util.List;
 
 public class ListagemCarroActivity extends AppCompatActivity {
 
-    RepositoryCarro repositoryCarro;
+    RepositoryConcessionaria repositoryConcessionaria;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listagem_carro);
 
-        repositoryCarro = new RepositoryCarro(this);
+        repositoryConcessionaria = new RepositoryConcessionaria(this);
 
-        List<Carro> listaCarro =  repositoryCarro.listarCarro();
+        List<Carro> listaCarro =  repositoryConcessionaria.listarCarro();
 
-        ListView listView = findViewById(R.id.listViewUser);
+        ListView listView = findViewById(R.id.listViewCarro);
         AdapterCarroListagem adapterCarroListagem =
                 new AdapterCarroListagem(this, listaCarro);
 

@@ -9,14 +9,14 @@ import android.widget.Toast;
 
 public class CadastraCarroActivity extends AppCompatActivity {
 
-    RepositoryCarro repositoryCarro;
+    RepositoryConcessionaria repositoryConcessionaria;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastra_carro);
 
-        repositoryCarro = new RepositoryCarro(this);
+        repositoryConcessionaria = new RepositoryConcessionaria(this);
     }
 
     public void cadastrarCarro(View view) {
@@ -38,7 +38,7 @@ public class CadastraCarroActivity extends AppCompatActivity {
 
             Toast.makeText(this, carro.getMarca() + " Cadastro com sucesso", Toast.LENGTH_LONG).show();
 
-            repositoryCarro.adicionarCarro(carro);
+            repositoryConcessionaria.adicionarCarro(carro);
 
             finish();
         }

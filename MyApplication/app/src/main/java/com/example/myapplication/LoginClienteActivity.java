@@ -1,7 +1,6 @@
 package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -9,7 +8,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class LoginClienteActivity extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,9 +28,7 @@ public class LoginClienteActivity extends AppCompatActivity {
         }
 
         Intent intent = new Intent(this, ListagemClienteLoginActivity.class);
-
-        intent.putExtra("CPF", CPF.getText().toString());
-
+        intent.putExtra("cpfCliente", CPF.getText().toString());
         startActivity(intent);
 
         CPF.setText("");

@@ -7,11 +7,11 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginCarroActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_login_carro);
     }
 
     public void listarCarro(View view){
@@ -19,7 +19,7 @@ public class LoginActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void buscar(View view) {
+    public void buscarCarro(View view) {
         EditText modelo = findViewById(R.id.editTextModelo);
         EditText ano = findViewById(R.id.editTextAno);
 
@@ -33,10 +33,8 @@ public class LoginActivity extends AppCompatActivity {
         }
 
         Intent intent = new Intent(this, ListagemCarroLoginActivity.class);
-
         intent.putExtra("modelo" , modelo.getText().toString());
         intent.putExtra("ano", ano.getText().toString());
-
         startActivity(intent);
 
         modelo.setText("");

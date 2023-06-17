@@ -11,7 +11,7 @@ import java.util.List;
 
 public class ListagemClienteLoginActivity extends AppCompatActivity {
 
-    RepositoryCliente repositoryCliente;
+    RepositoryConcessionaria repositoryConcessionaria;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,12 +19,13 @@ public class ListagemClienteLoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_listagem_cliente);
 
         Intent intent = getIntent();
+        String CPF = intent.getStringExtra("cpfCliente");
 
-        String CPF = intent.getStringExtra("CPF");
+        Toast.makeText(this,"CPF " + CPF,Toast.LENGTH_LONG).show();
 
-        repositoryCliente = new RepositoryCliente(this);
+        repositoryConcessionaria = new RepositoryConcessionaria(this);
 
-        List<Cliente> listaCliente =  repositoryCliente.buscarClientePeloCPF(CPF);
+        List<Cliente> listaCliente =  repositoryConcessionaria.buscarClientePeloCPF(CPF);
         if(listaCliente.isEmpty()){
             Toast.makeText(this,"Cliente não encontrado",Toast.LENGTH_LONG).show();
         }else{

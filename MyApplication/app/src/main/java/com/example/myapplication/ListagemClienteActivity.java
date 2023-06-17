@@ -8,16 +8,16 @@ import android.widget.ListView;
 import java.util.List;
 
 public class ListagemClienteActivity extends AppCompatActivity {
-    RepositoryCliente repositoryCliente;
+    RepositoryConcessionaria repositoryConcessionaria;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listagem_cliente);
 
-        repositoryCliente = new RepositoryCliente(this);
+        repositoryConcessionaria = new RepositoryConcessionaria(this);
 
-        List<Cliente> listaCliente =  repositoryCliente.listarCliente();
+        List<Cliente> listaCliente =  repositoryConcessionaria.listarCliente();
 
         ListView listView = findViewById(R.id.listViewCliente);
         AdapterClienteListagem adapterClienteListagem =

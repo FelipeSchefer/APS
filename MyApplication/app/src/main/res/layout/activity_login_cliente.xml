@@ -30,10 +30,12 @@
             android:layout_width="match_parent"
             android:layout_height="72dp"
             android:ems="10"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:importantForAutofill="no"
+            tools:ignore="LabelFor" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/button33"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="buscarCliente"
@@ -61,7 +63,7 @@
             android:textSize="20sp" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/button34"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="listarCliente"
