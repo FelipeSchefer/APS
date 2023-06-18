@@ -205,7 +205,23 @@ public class RepositoryConcessionaria extends SQLiteOpenHelper {
         return listaCliente;
     }
 
+    public boolean editarClientePeloId(String id, String nome, String CPF){
+        SQLiteDatabase db = getReadableDatabase();
 
+        ContentValues values = new ContentValues();
+        values.put("id", id);
+        values.put("nome", nome);
+        values.put("CPF", CPF);
+
+        String whereClause = "id = ?";
+        String[] whereArgs = { String.valueOf(id) };
+
+        db.update("cliente", values, whereClause, whereArgs);
+
+        db.close();
+
+        return true;
+    }
 }
 
 

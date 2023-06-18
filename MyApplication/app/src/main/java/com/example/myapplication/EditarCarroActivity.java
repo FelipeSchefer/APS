@@ -48,10 +48,8 @@ public class EditarCarroActivity extends AppCompatActivity {
         boolean editado = repositoryConcessionaria.editarCarroPeloId(atualizaId, atualizaMarca, atualizaAno, atualizaModelo);
 
         if(editado){
-            Intent intent = new Intent(this, LoginCarroActivity.class);
+            Intent intent = new Intent(this, LoginClienteActivity.class);
             startActivity(intent);
         }
-
-        Toast.makeText(this,"Eiditando !!" + id,Toast.LENGTH_LONG).show();
     }
 }

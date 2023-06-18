@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -35,10 +36,14 @@ public class AdapterClienteListagem extends ArrayAdapter<Cliente> {
             view = layoutInflater.inflate(R.layout.layout_cliente_info,null);
         }
         Cliente cliente = lista.get(position);
-        TextView nome = view.findViewById(R.id.textViewNome);
-        TextView CPF = view.findViewById(R.id.textViewCPF);
+        TextView id = view.findViewById(R.id.textViewClienteIndex);
+        TextView nome = view.findViewById(R.id.textViewClienteNome);
+        TextView CPF = view.findViewById(R.id.textViewClienteCpf);
+        Button editar = view.findViewById(R.id.btnLayoutClienteId);
+        id.setText(""+cliente.getId());
         nome.setText(cliente.getNome());
         CPF.setText(cliente.getCPF());
+        editar.hasOnClickListeners();
 
         return view;
     }

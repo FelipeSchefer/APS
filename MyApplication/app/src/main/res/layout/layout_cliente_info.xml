@@ -4,8 +4,17 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+
     <TextView
-        android:id="@+id/textViewNome"
+        android:id="@+id/textViewClienteIndex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20px"
+        android:padding="20px"
+        android:text="Id" />
+
+    <TextView
+        android:id="@+id/textViewClienteNome1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20px"
@@ -13,11 +22,34 @@
         android:text="Nome" />
 
     <TextView
-        android:id="@+id/textViewCPF"
+        android:id="@+id/textViewClienteNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20px"
+        android:padding="20px"
+        android:text="Nome" />
+
+    <TextView
+        android:id="@+id/textViewClienteCpf1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20px"
         android:padding="20px"
         android:text="CPF" />
+
+    <TextView
+        android:id="@+id/textViewClienteCpf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20px"
+        android:padding="20px"
+        android:text="CPF" />
+
+    <Button
+        android:id="@+id/btnLayoutClienteId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="editarRegistroCliente"
+        android:text="Editar" />
 
 </LinearLayout>
