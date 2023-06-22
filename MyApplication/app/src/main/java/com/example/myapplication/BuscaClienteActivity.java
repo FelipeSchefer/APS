@@ -21,8 +21,6 @@ public class BuscaClienteActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String CPF = intent.getStringExtra("cpfCliente");
 
-        Toast.makeText(this,"CPF " + CPF,Toast.LENGTH_LONG).show();
-
         repositoryConcessionaria = new RepositoryConcessionaria(this);
 
         List<Cliente> listaCliente =  repositoryConcessionaria.buscarClientePeloCPF(CPF);
