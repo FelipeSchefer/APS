@@ -19,7 +19,7 @@ public class BuscaClienteActivity extends AppCompatActivity {
         setContentView(R.layout.activity_listagem_cliente);
 
         Intent intent = getIntent();
-        String CPF = intent.getStringExtra("cpfCliente");
+        String CPF = (String)intent.getSerializableExtra("cpfCliente");
 
         repositoryConcessionaria = new RepositoryConcessionaria(this);
 

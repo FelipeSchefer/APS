@@ -32,18 +32,4 @@ public class ListagemCarroActivity extends AppCompatActivity {
 
         listView.setAdapter(adapterCarroListagem);
     }
-
-    public void editarRegistroCarro(View view) {
-        TextView id = findViewById(R.id.textViewIndex);
-        TextView marca = findViewById(R.id.textViewMarca);
-        TextView ano = findViewById(R.id.textViewAno);
-        TextView modelo = findViewById(R.id.textViewModelo);
-
-        Intent intent = new Intent(this, EditarCarroActivity.class);
-        intent.putExtra("id" , id.getText().toString());
-        intent.putExtra("marca" , marca.getText().toString());
-        intent.putExtra("ano" , ano.getText().toString());
-        intent.putExtra("modelo" , modelo.getText().toString());
-        startActivity(intent);
-    }
 }

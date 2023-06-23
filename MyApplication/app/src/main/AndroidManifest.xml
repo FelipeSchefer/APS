@@ -31,6 +31,9 @@
             android:name=".BuscaCarroActivity"
             android:exported="false" />
         <activity
+            android:name=".BuscaClienteActivity"
+            android:exported="false" />
+        <activity
             android:name=".RepositoryConcessionaria"
             android:exported="false" />
         <activity

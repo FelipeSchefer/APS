@@ -17,15 +17,15 @@ public class EditarClienteActivity extends AppCompatActivity {
         setContentView(R.layout.activity_editar_cliente);
 
         Intent intent = getIntent();
-        String id = intent.getStringExtra("id");
-        String nome = intent.getStringExtra("nome");
-        String CPF = intent.getStringExtra("CPF");
+        Integer id = (Integer) intent.getSerializableExtra("id");
+        String nome = (String) intent.getSerializableExtra("nome");
+        String CPF = (String) intent.getSerializableExtra("CPF");
 
         TextView atualizaId = findViewById(R.id.textViewEditaClienteIndex);
         TextView atualizaNomeId = findViewById(R.id.textViewEditaClienteNome);
         TextView atualizaCpfId = findViewById(R.id.textViewEditaClienteCpf);
 
-        atualizaId.setText(id);
+        atualizaId.setText(id + "");
         atualizaNomeId.setText(nome);
         atualizaCpfId.setText(CPF);
     }

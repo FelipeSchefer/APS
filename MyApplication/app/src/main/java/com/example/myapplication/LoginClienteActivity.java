@@ -27,9 +27,9 @@ public class LoginClienteActivity extends AppCompatActivity {
             return;
         }
 
-        Intent intent = new Intent(this, BuscaClienteActivity.class);
+        Intent intent = new Intent(view.getContext(), BuscaClienteActivity.class);
         intent.putExtra("cpfCliente", CPF.getText().toString());
-        startActivity(intent);
+        view.getContext().startActivity(intent);
 
         CPF.setText("");
     }

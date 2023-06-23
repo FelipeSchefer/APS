@@ -28,16 +28,4 @@ public class ListagemClienteActivity extends AppCompatActivity {
 
         listView.setAdapter(adapterClienteListagem);
     }
-
-    public void editarRegistroCliente(View view) {
-        TextView id = findViewById(R.id.textViewClienteIndex);
-        TextView nome = findViewById(R.id.textViewClienteNome);
-        TextView CPF = findViewById(R.id.textViewClienteCpf);
-
-        Intent intent = new Intent(this, EditarClienteActivity.class);
-        intent.putExtra("id" , id.getText().toString());
-        intent.putExtra("Nome" , nome.getText().toString());
-        intent.putExtra("CPF" , CPF.getText().toString());
-        startActivity(intent);
-    }
 }

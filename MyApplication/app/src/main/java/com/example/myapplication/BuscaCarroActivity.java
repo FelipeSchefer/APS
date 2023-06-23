@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.renderscript.ScriptIntrinsic;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -19,8 +20,8 @@ public class BuscaCarroActivity extends AppCompatActivity {
         setContentView(R.layout.activity_listagem_carro);
 
         Intent intent = getIntent();
-        String modelo = intent.getStringExtra("modelo");
-        String ano = intent.getStringExtra("ano");
+        String modelo = (String) intent.getSerializableExtra("modelo");
+        String ano = (String) intent.getSerializableExtra("ano");
 
         repositoryConcessionaria = new RepositoryConcessionaria(this);
 

@@ -17,17 +17,17 @@ public class EditarCarroActivity extends AppCompatActivity {
         setContentView(R.layout.activity_editar_carro);
 
         Intent intent = getIntent();
-        String id = intent.getStringExtra("id");
-        String marca = intent.getStringExtra("marca");
-        String ano = intent.getStringExtra("ano");
-        String modelo = intent.getStringExtra("modelo");
+        Integer id = (Integer)intent.getSerializableExtra("id");
+        String marca = (String) intent.getSerializableExtra("marca");
+        String ano = (String) intent.getSerializableExtra("ano");
+        String modelo = (String) intent.getSerializableExtra("modelo");
 
         TextView atualizaId = findViewById(R.id.textViewEditaIndex);
         TextView marcaId = findViewById(R.id.textViewEditaMarca);
         TextView anoId = findViewById(R.id.textViewEditaAno);
         TextView modeloId = findViewById(R.id.textViewEditaModelo);
 
-        atualizaId.setText(id);
+        atualizaId.setText(id+ "");
         marcaId.setText(marca);
         anoId.setText(ano);
         modeloId.setText(modelo);
@@ -48,7 +48,7 @@ public class EditarCarroActivity extends AppCompatActivity {
         boolean editado = repositoryConcessionaria.editarCarroPeloId(atualizaId, atualizaMarca, atualizaAno, atualizaModelo);
 
         if(editado){
-            Intent intent = new Intent(this, LoginClienteActivity.class);
+            Intent intent = new Intent(this, LoginCarroActivity.class);
             startActivity(intent);
         }
     }

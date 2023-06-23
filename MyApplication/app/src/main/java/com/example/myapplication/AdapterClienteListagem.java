@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -45,7 +46,20 @@ public class AdapterClienteListagem extends ArrayAdapter<Cliente> {
         CPF.setText(cliente.getCPF());
         editar.hasOnClickListeners();
 
+        editar.setOnClickListener((View v) ->{
+            editarRegistroCliente(v, cliente);
+        });
+
         return view;
+    }
+
+    public void editarRegistroCliente(View view, Cliente cliente ) {
+        Intent intent = new Intent(view.getContext(), EditarClienteActivity.class);
+
+        intent.putExtra("id" , cliente.getId());
+        intent.putExtra("Nome" , cliente.getNome());
+        intent.putExtra("CPF" , cliente.getCPF());
+        view.getContext().startActivity(intent);
     }
 }
 
